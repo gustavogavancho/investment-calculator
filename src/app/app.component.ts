@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./components/header/header.component";
 import { UserInputComponent } from "./components/user-input/user-input.component";
 import { InvestmentsResultsComponent } from "./components/investments-results/investments-results.component";
-import { InputInvestment } from './models/input-investment.model';
+import { InvestmentInput } from './models/investment-input.model';
 import { InvestmentService } from './services/investment.service';
 import { InvestmentResult } from './models/investment-result.model';
 
@@ -22,7 +22,7 @@ export class AppComponent {
 
   }
 
-  onCalculateListening(input: InputInvestment) {
+  onCalculateListening(input: InvestmentInput) {
     this.isCalculated = true;
     this.investmentResults = this.investmentService.calculateInvestment(input);
   }

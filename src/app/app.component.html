@@ -1,8 +1,6 @@
 <app-header />
-<main>
-  <app-user-input (calculate)="onCalculateListening($event)" />
+<app-user-input (calculate)="onCalculateListening($event)" />
 
-  @if(isCalculated) {
-    <app-investments-results [investmentResults]="investmentResults" />
-  }
-</main>
+@if(isCalculated) {
+  <app-investments-results [investmentResults]="investmentResults" />
+}

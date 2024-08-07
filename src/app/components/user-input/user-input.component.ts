@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { InputInvestment } from '../../models/input-investment.model';
+import { InvestmentInput } from '../../models/investment-input.model';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -10,10 +10,10 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './user-input.component.css'
 })
 export class UserInputComponent {
-  inputInvestment: InputInvestment = { initialInvestment: 0, annualInvestment: 0, expectedReturn: 0, duration : 0  };
-  @Output() calculate = new EventEmitter<InputInvestment>();
+  enteredInitialInvestment: InvestmentInput = { initialInvestment: 0, annualInvestment: 0, expectedReturn: 0, duration : 0  };
+  @Output() calculate = new EventEmitter<InvestmentInput>();
 
-  onCalculate() {
-    this.calculate.emit(this.inputInvestment);
+  onSubmit() {
+    this.calculate.emit(this.enteredInitialInvestment);
   }
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { InputInvestment } from '../models/input-investment.model';
+import { InvestmentInput } from '../models/investment-input.model';
 import { InvestmentResult } from '../models/investment-result.model';
 
 @Injectable({
@@ -7,7 +7,7 @@ import { InvestmentResult } from '../models/investment-result.model';
 })
 export class InvestmentService {
 
-  calculateInvestment(input: InputInvestment): InvestmentResult[] {
+  calculateInvestment(input: InvestmentInput): InvestmentResult[] {
     const investmentResults: InvestmentResult[] = [];
     let investmentValueCalculated = input.initialInvestment;
 

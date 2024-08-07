@@ -1,23 +1,45 @@
-<form>
+<form (ngSubmit)="onSubmit()">
   <div class="input-group">
-      <div>
-          <label for="initial-investment">Initial Investment</label>
-          <input type="number" id="initial-investment" name="initial-investment" [(ngModel)]="inputInvestment.initialInvestment">
-      </div>
-      <div>
-          <label for="annual-investment">Annual Investment</label>
-          <input type="number" id="annual-investment" name="annual-investment" [(ngModel)]="inputInvestment.annualInvestment">
-      </div>
+    <p>
+      <label for="initial-investment">Initial Investment</label>
+      <input
+        type="number"
+        id="initial-investment"
+        name="initial-investment"
+        [(ngModel)]="enteredInitialInvestment.initialInvestment"
+      />
+    </p>
+    <p>
+      <label for="annual-investment">Annual Investment</label>
+      <input
+        type="number"
+        id="annual-investment"
+        name="annual-investment"
+        [(ngModel)]="enteredInitialInvestment.annualInvestment"
+      />
+    </p>
   </div>
   <div class="input-group">
-      <div>
-          <label for="expected-return">Expected Return</label>
-          <input type="number" id="expected-return" name="expected-return" [(ngModel)]="inputInvestment.expectedReturn">
-      </div>
-      <div>
-          <label for="duration">Duration</label>
-          <input type="number" id="duration" name="duration" [(ngModel)]="inputInvestment.duration">
-      </div>
+    <p>
+      <label for="expected-return">Expected Return</label>
+      <input
+        type="number"
+        id="expected-return"
+        name="expected-return"
+        [(ngModel)]="enteredInitialInvestment.expectedReturn"
+      />
+    </p>
+    <p>
+      <label for="duration">Duration</label>
+      <input
+        type="number"
+        id="duration"
+        name="duration"
+        [(ngModel)]="enteredInitialInvestment.duration"
+      />
+    </p>
   </div>
-  <button type="submit" (click)="onCalculate()">Calculate</button>
+  <p>
+    <button type="submit">Calculate</button>
+  </p>
 </form>
